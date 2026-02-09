@@ -1,3 +1,40 @@
+// Código do jogo da aula
+
+
+alert('Bem vindo ao jogo do número secreto');
+let numeroSecreto = 7;
+console.log('número secreto: ', numeroSecreto);
+let chute;
+let tentativas = 1
+
+// enquanto chute não for igual ao número secreto
+while (chute != numeroSecreto) {
+  chute = prompt('Chute um número entre 1 e 10');
+  console.log('número chutado:', chute);
+  // se o chute for igual o número secreto
+  if (chute == numeroSecreto) {
+    break
+  } 
+  // se o chute não for igual ao número secreto
+  else {
+    if (chute > numeroSecreto ) {
+      alert(`Você errou! O número secreto é menor que ${chute} `);
+      console.log('O jogador perdeu');
+    } else {
+      alert(`Você errou! O número secreto é maior que ${chute}`);
+      console.log('O jogador perdeu')
+    }
+  }
+  // tentativas = tentativas + 1 - melhor forma abaixo 
+  tentativas++;
+} if (tentativas > 1) {
+  alert(`Parabéns! Você acertou o número secreto (${numeroSecreto}), com o total de ${tentativas} tentativas!`);
+    console.log(`O jogador venceu com o total de ${tentativas} tentativas`)
+} else {
+   alert(`Parabéns! Você acertou o número secreto (${numeroSecreto}), com o total de ${tentativas} tentativa!`);
+    console.log(`O jogador venceu com o total de ${tentativas} tentativa`)
+}
+
 // ================================
 //      Desafios e Soluções
 // ================================
@@ -40,7 +77,7 @@ if (idade >= 18) {
 }
 
 // ================================
-//    2 Desafios e Soluções
+//    2  Desafios e Soluções
 // ================================
 
 // 1. Pergunte ao usuário qual é o dia da semana. Se a resposta for "Sábado" ou "Domingo", mostre "Bom fim de semana!". Caso contrário, mostre "Boa semana!".
@@ -120,4 +157,157 @@ let nomeDoUsuário = prompt('Qual é o seu nome?')
 console.log('O nome digitado é: ', nomeDoUsuário)
 alert(`Seja bem vindo ${nomeDoUsuário}, como posso ajudar?`)
 
+// ================================
+//    3  Desafios e Soluções
+// ================================
 
+// 1. Crie um contador que comece em 1 e vá até 10 usando um loop while. Mostre cada número.
+
+alert('Bem vindo ao contador');
+let contador = 1; 
+
+while (contador <=10) {
+console.log(contador)
+contador++
+}
+
+// 2. Crie um contador que começa em 10 e vá até 0 usando um loop while. Mostre cada número.
+alert('Bem vindo ao contador');
+let contador = 10
+
+while (contador >= 0) {
+  console.log(contador)
+  contador--
+}
+
+// 3. Crie um programa de contagem regressiva. Peça um número e conte deste número até 0, usando um loop while no console do navegador.
+
+alert('Bem vindo ao programa de contagem regressiva');
+let numeroInicial = prompt('Escolha um número para a contagem regressiva');
+
+while (numeroInicial >= 0) {
+  console.log(numeroInicial);
+  numeroInicial--;
+}
+alert('A contagem terminou');
+
+// 4. Crie um programa de contagem progressiva. Peça um número e conte de 0 até esse número, usando um loop while no console do navegador.
+
+alert('Bem vindo ao programa de contagem progressiva');
+let numeroInicial = 0;
+let numeroEscolhido = prompt('Escolha um número para ser feita a contagem progressiva')
+
+while (numeroInicial <= numeroEscolhido) {
+  console.log(numeroInicial)
+  numeroInicial++
+}
+
+// ================================
+//    Desafios e Soluções Finais
+// ================================
+
+// 1, 2 e 3. Crie um programa em JavaScript que exiba uma mensagem de boas-vindas no console do navegador. Em seguida, crie uma variável chamada nome e atribua a ela o seu nome. Utilize essa variável para mostrar a mensagem “Olá, [seu nome]!” tanto no console quanto em um alert.
+alert('Boas vindas aos site')
+let nome = prompt('Qual o seu nome?')
+console.log('Boas Vindas ao site', nome)
+alert('Seja bem vindo(a) ' + nome)
+ 
+// 4. Utilize o prompt e faça a seguinte pergunta: Qual a linguagem de programação que você mais gosta?. Em seguida, armazene a resposta em uma variável e mostre no console do navegador.
+alert('Olá usuário')
+let resposta = prompt('Qual a linguagem de programação que você mais gosta?')
+console.log('Linguagem escolhida: ', resposta)
+ 
+// 5. Crie uma variável chamada "valor1" e outra chamada "valor2", atribuindo a elas valores numéricos de sua escolha. Em seguida, realize a soma desses dois valores e armazene o resultado em uma terceira variável chamada "resultado". Utilize o console.log para mostrar a mensagem "A soma de [valor1] e [valor2] é igual a [resultado]." no console.
+alert('Bem vindo á Caluladora');
+alert('Escolha 2 números para realizar a operação');
+let valor1 = Number(prompt('Primeiro número'));
+console.log('primeiro número: ', valor1)
+
+let valor2 = Number(prompt('Segundo número'));
+console.log('segundo número: ', valor2);
+
+let resultado = valor1 + valor2
+console.log(`a soma de ${valor1} e ${valor2} é igual a ${resultado}`);
+alert('o Resultado é: ' + resultado);
+
+
+// 6. Crie uma variável chamada "valor1" e outra chamada "valor2", atribuindo a elas valores numéricos de sua escolha. Em seguida, realize a subtração desses dois valores e armazene o resultado em uma terceira variável chamada "resultado". Utilize o console.log para mostrar a mensagem "A subtração de [valor1] e [valor2] é igual a [resultado]." no console.
+alert('Bem vindo á Caluladora');
+alert('Escolha 2 números para realizar a operação');
+let valor1 = Number(prompt('Primeiro número'));
+console.log('primeiro número: ', valor1)
+
+let valor2 = Number(prompt('Segundo número'));
+console.log('segundo número: ', valor2);
+
+let resultado = valor1 - valor2
+console.log(`a subtração de ${valor1} e ${valor2} é igual a ${resultado}`);
+alert('o Resultado é: ' + resultado);
+
+// 7. Peça ao usuário para inserir sua idade com prompt. Com base na idade inserida, utilize um if para verificar se a pessoa é maior ou menor de idade, exibindo uma mensagem apropriada no console.
+alert('Bem  vindo ao site');
+let idade = prompt('Por favor digite a sua idade');
+console.log('Idade: ', idade)
+
+if (idade >= 18) {
+console.log('Pode tirar a habilitação');
+alert('Você é maior de idade, pode tirar a habilitação.');
+} else{
+  console.log('Não pode tirar a habilitação.');
+  alert('Você e menor de idade,, não pode tirar a habilitação.');
+}   
+
+// 8. Crie uma variável "numero" e peça um valor com prompt verifique se é positivo, negativo ou zero. Use if-else para imprimir a respectiva mensagem.
+alert('Bem vindo ao site');
+let numero = Number(prompt('Esccolha um número para verifiar se é positivo ou negativo'));
+
+if (numero > 0){
+  console.log(`número positivo: ${numero}`);
+  alert(`número positivo: ${numero}`);
+} else if (numero < 0 ) {
+  console.log (`número negativo ${numero}`);
+  alert(`número negativo ${numero}`);
+} else {
+  console.log('O número 0 é neutro')
+  alert('O número 0 é neutro')
+}
+
+// 9. Use um loop while para imprimir os números de 1 a 10 no console.
+alert('Bem vindo ao Contador')
+let contador = 1
+
+while (contador <= 10) {
+  console.log(contador)
+  contador ++
+}
+
+// 10. Crie uma variável "nota" e atribua um valor numérico a ela. Use if-else para determinar se a nota é maior ou igual a 7 e exiba "Aprovado" ou "Reprovado" no console.
+alert('Bem vindo ao site da Escola');
+let nota = Number(prompt('Qual a sua nota?'));
+console.log('Nota:', nota)
+if(nota >= 7) {
+console.log('Aprovado');
+alert('Parabéns você foi aprovado');
+} else {
+  console.log('Reprovado')
+  alert('Você foi reprovado')
+}
+
+// 11. Use o Math.random para gerar qualquer número aleatório e exiba esse número no console.
+alert('Gerador de números');
+let numero = Math.random();
+console.log(`Número gerado: , ${numero}`);
+alert(`O número gerado foi: ${numero}`)
+
+// 12. Use o Math.random para gerar um número inteiro entre 1 e 10 e exiba esse número no console.
+alert('Gerador de números');
+let numero = parseInt(Math.random() * 10);
+console.log(`Número gerado: ${numero}`);
+alert(`O número gerado foi: ${numero}`)
+
+
+// 13. Use o Math.random para gerar um número inteiro entre 1 e 1000 e exiba esse número no console.
+alert('Gerador de números');
+let numero = parseInt(Math.random() * 1000);
+console.log(`Número gerado: ${numero}`);
+alert(`O número gerado foi: ${numero}`)
