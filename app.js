@@ -285,7 +285,7 @@ alert(`O número gerado foi: ${numero}`)
 // INICO CURSO 2 - LÓGICA DE PROGRAMAÇÃO INTEGRAÇÃO DO HTML AO JS
 
 // ================================
-//    1  Desafios e Soluções 
+//   1  Desafios e Soluções
 // ================================
 
 // 1. Altere o conteúdo da tag h1 com document.querySelector e atribua o seguinte texto: Hora do Desafio.
@@ -321,3 +321,45 @@ function verificarPrompt() {
     console.log('resultado: ', resultado);
     alert(`O resultado é ${resultado}`);
  }
+
+// ================================
+//    2  Desafios e Soluções
+// ================================
+
+// 1. Criar uma função que exibe "Olá, mundo!" no console.
+function mensagem() {
+    console.log('Olá,Mundo!');
+}
+mensagem();
+
+// 2. Criar uma função que recebe um nome como parâmetro e exibe "Olá, [nome]!" no console.
+function exibirNome(nome) {
+    console.log(`Olá, ${nome}`);
+}
+exibirNome('Erik');
+
+// 3. Criar uma função que recebe um número como parâmetro e retorna o dobro desse número.
+function dobroDoNumero(numero) {
+    return numero * 2;
+}
+let resultadoDobro = dobroDoNumero(7);
+console.log(resultadoDobro)
+ 
+// 4. Criar uma função que recebe três números como parâmetros e retorna a média deles.
+function calculo(a, b, c) {
+    return (a + b + c) / 3;
+}
+
+let resultadoMedia = calculo(10, 20, 30);
+console.log(resultadoMedia);
+
+// 5. Criar uma função que recebe dois números como parâmetros e retorna o maior deles.
+function maiorNumero(a, b) {
+    return a > b ? a : b;
+}
+
+let resultadoMaior = maiorNumero(3, 7);
+console.log(resultadoMaior);
+
+
+
