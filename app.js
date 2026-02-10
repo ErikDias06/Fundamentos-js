@@ -1,39 +1,4 @@
-// Código do jogo da aula
-
-
-alert('Bem vindo ao jogo do número secreto');
-let numeroSecreto = 7;
-console.log('número secreto: ', numeroSecreto);
-let chute;
-let tentativas = 1
-
-// enquanto chute não for igual ao número secreto
-while (chute != numeroSecreto) {
-  chute = prompt('Chute um número entre 1 e 10');
-  console.log('número chutado:', chute);
-  // se o chute for igual o número secreto
-  if (chute == numeroSecreto) {
-    break
-  } 
-  // se o chute não for igual ao número secreto
-  else {
-    if (chute > numeroSecreto ) {
-      alert(`Você errou! O número secreto é menor que ${chute} `);
-      console.log('O jogador perdeu');
-    } else {
-      alert(`Você errou! O número secreto é maior que ${chute}`);
-      console.log('O jogador perdeu')
-    }
-  }
-  // tentativas = tentativas + 1 - melhor forma abaixo 
-  tentativas++;
-} if (tentativas > 1) {
-  alert(`Parabéns! Você acertou o número secreto (${numeroSecreto}), com o total de ${tentativas} tentativas!`);
-    console.log(`O jogador venceu com o total de ${tentativas} tentativas`)
-} else {
-   alert(`Parabéns! Você acertou o número secreto (${numeroSecreto}), com o total de ${tentativas} tentativa!`);
-    console.log(`O jogador venceu com o total de ${tentativas} tentativa`)
-}
+// CURSO 1 - INTRODUÇÃO LÓGICA DE PROGRAMAÇÃO COM JAVASCRIPT
 
 // ================================
 //      Desafios e Soluções
@@ -311,3 +276,48 @@ alert('Gerador de números');
 let numero = parseInt(Math.random() * 1000);
 console.log(`Número gerado: ${numero}`);
 alert(`O número gerado foi: ${numero}`)
+
+
+// FIM CURSO 1
+
+
+
+// INICO CURSO 2 - LÓGICA DE PROGRAMAÇÃO INTEGRAÇÃO DO JS AO HTML
+
+// ================================
+//    1  Desafios e Soluções 
+// ================================
+
+// 1. Altere o conteúdo da tag h1 com document.querySelector e atribua o seguinte texto: Hora do Desafio.
+let titulo = document.querySelector('h1');
+titulo.innerHTML = 'Hora do Desafio'
+
+// 2. Crie uma função que exiba no console a mensagem O botão foi clicado sempre que o botão Console for pressionado.
+function verificarClique() {
+    console.log('O botão foi clicado')
+}
+
+// 3. Crie uma função que exiba um alerta com a mensagem: Eu amo JS, sempre que o botão Alerta for pressionado.
+function verificarAlert() {
+    alert('Eu amo JS');
+    console.log('O botão alert foi clicado')
+}
+ 
+// 4. Crie uma função que é executada quando o botão prompt é clicado, perguntando o nome de uma cidade do Brasil. Em seguida, exiba um alerta com a mensagem concatenando a resposta com o texto: Estive em {cidade} e lembrei de você.
+function verificarPrompt() {
+    console.log('O botão Prompt foi clicado');
+    let cidade = prompt('Me diga um nome de uma cidade do Brasil');
+    alert(`Estive em ${cidade} e lembrei de você`);
+}
+
+// 5. Ao clicar no botão soma, peça 2 números inteiros e exiba o resultado da soma em um alerta.
+ function verificarSoma() {
+    alert('Você selecionou soma');
+    let numero1 = Number(prompt('Primeiro número inteiro'));
+    console.log('primeiro número: ', numero1);
+    let numero2 = Number(prompt('Segundo número inteiro'));
+    console.log('segundo número: ', numero2);
+    let resultado = numero1 + numero2;
+    console.log('resultado: ', resultado);
+    alert(`O resultado é ${resultado}`);
+ }
