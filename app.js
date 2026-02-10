@@ -282,7 +282,7 @@ alert(`O número gerado foi: ${numero}`)
 
 
 
-// INICO CURSO 2 - LÓGICA DE PROGRAMAÇÃO INTEGRAÇÃO DO JS AO HTML
+// INICO CURSO 2 - LÓGICA DE PROGRAMAÇÃO INTEGRAÇÃO DO HTML AO JS
 
 // ================================
 //    1  Desafios e Soluções 
