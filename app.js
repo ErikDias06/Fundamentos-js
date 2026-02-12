@@ -361,5 +361,82 @@ function maiorNumero(a, b) {
 let resultadoMaior = maiorNumero(3, 7);
 console.log(resultadoMaior);
 
+// ================================
+//    3  Desafios e Soluções
+// ================================
+
+// 1. Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.
+
+function IndiceDeMassaCorporal() {
+    let peso = Number(prompt('Qual seu peso em Kg?'));
+    let altura = Number(prompt('Qual a sua altura em metros?'));
+    let IMC = peso / (altura * altura);
+    alert(`Seu IMC é de ${IMC.toFixed(2)}`);
+} 
+IndiceDeMassaCorporal()
+
+// 2. Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.
+let n = Number(prompt('Escolha um número para fatorar'));
+
+function fatoração(n) {
+    if (n < 0) return alert('O número deve ser maior que 0');
+    let resultado = 1
+    for (let i = 2; i <= n; i++) {
+        resultado *=i;
+    }
+    return resultado;
+}
+fatoração(n);
+alert(`O fatorial de ${n} é ${fatoração(n)}`);
+
+// 3. Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais. Para isso, considere a cotação do dólar igual a R$4,80.
+let dol = Number(prompt('Qual valor em (Dólar) deseja converter para (Real)'));
+ function conversor(dol) {
+    if (dol <= 0) return alert('Esse valor não é válido!');
+    let resultadoReal = dol * 4.80;
+    let mensagemResultado = resultadoReal > 1 ? 'reais' : 'real';
+    alert(`A converão de ${dol} dólares para Real, deu um total de ${resultadoReal} ${mensagemResultado} `);
+ }
+ conversor(dol);
+ 
+ // 4. Crie uma função que mostre na tela a área e o perímetro de uma sala retangular, utilizando altura e largura que serão dadas como parâmetro.
+let largura = Number(prompt('Qual a largura da sala em metros?'));
+let altura = Number(prompt('Qual a altura da sala em metros?'));
+
+function calculo(altura, largura) {
+     if (altura <= 0 || largura <= 0) {
+        return alert('Os valores são inválidos!');
+    } 
+    let area = altura * largura;
+    let perimetro = 2 * (altura + largura);
+    alert(`O valor do perímetro é de: ${perimetro}m e o valor da área é de ${area}m`);
+}
+calculo(altura, largura);
+
+// 5. Crie uma função que mostre na tela a área e o perímetro de uma sala circular, utilizando seu raio que será fornecido como parâmetro. Considere Pi = 3,14.
+let raio = Number(prompt('Qual o raio da sala circular?'));
+let pi = 3.14;
+function calcule(raio) {
+    if (raio <= 0) {
+        alert('O valor é inválido!');
+    }
+    let area = pi * (raio ** 2);
+    let circunferencia = 2 * pi * raio;
+    alert(`O valor da área é de: ${area.toFixed(2)}m e o valor da circunferência é de: ${circunferencia.toFixed(2)}m `);
+}
+calcule(raio);  
+
+// 6. Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.
+let numero = Number(prompt('Qual número você deseja ver aa tabuada?'));
+
+function tabuada(numero) {
+    for (let i = 1; i<= 10; i++){
+        let resultado = numero * i;
+        console.log(`${numero} x ${i} = ${resultado}`)
+    }
+}
+tabuada(numero);
+
+
 
 
